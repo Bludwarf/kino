@@ -1,0 +1,23 @@
+<h1>{{planning.titre}}</h1>
+
+<table class="planning">
+
+  <tr>
+    <th colspan="2">Jour</th>
+    <th>Heure</th>
+    <th>Caisse</th>
+    <th>Accueil</th>
+    <th>Film</th>
+  </tr>
+
+  <!-- Séance -->
+  <tr *ngFor="let seance of planning.seances" [classList]="getRowClassList(seance)">
+    <td class="jour jour-semaine">{{seance.jourSemaine}}</td>
+    <td class="jour jour-num">{{seance.jourNum}}</td>
+    <td class="heure">{{seance.heure}}</td>
+    <td class="caisse">{{planning.getNomUnique(seance.benevoles.caisse)}}</td>
+    <td class="accueil">{{planning.getNomUnique(seance.benevoles.accueil)}}</td>
+    <td class="film">{{seance.film?.titre}}</td>
+  </tr>
+
+</table>

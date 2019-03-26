@@ -1,0 +1,66 @@
+$background-even = #C5D9F1
+$border-color = #4F81D8
+$border = solid 3px $border-color
+
+h1
+  font-family: Calibri, sans-serif
+  margin: 1em auto
+  text-align: center
+
+.jour
+  text-align: right
+
+.jour-num
+  text-align: center
+
+.planning
+  //border: solid 3px $border-color
+  border-collapse: collapse
+  font-family: Calibri, sans-serif
+  margin: auto auto
+
+.planning tr th
+  color: $border-color
+
+.planning tr td
+  padding: 2px 6px
+  background-color: white
+
+.planning tr:first-child td
+  border-top: $border
+
+.planning tr.debut-semaine td
+  border-top: $border
+
+.planning tr:last-child td
+  border-bottom: $border
+
+.planning tr.same-day td.jour
+  color: white;
+
+.planning tr.even td
+  background-color: $background-even
+
+.planning tr.non-assuree td,
+.planning tr.non-assuree td.film
+  color: #d50000
+  font-weight: bold
+
+.planning tr.even.same-day td.jour
+  color: $background-even
+
+.planning tr td.film
+  font-style: italic
+  color: #888
+  padding-left: 12px
+  padding-right: 12px
+//background: linear-gradient(to right, #CCC, #FFF)
+
+.planning tr.debut-semaine td.film
+  border-top: none
+
+.planning tr:last-child td.film
+  border-bottom: none
+
+.planning tr.even td.film
+  background-color: lightness($background-even, 95%)
